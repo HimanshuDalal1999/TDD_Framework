@@ -96,7 +96,7 @@ public class TestClass extends BaseClass
 	}
 	
 	
-	
+// Azure Repository
 //===================================================	
 	@AfterClass
 	public void closeBrowser()
