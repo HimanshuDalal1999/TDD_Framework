@@ -59,7 +59,7 @@ public class TestClass extends BaseClass
 	}
 //-----------------------------------------------------------------------------------------------
 	@Test(priority = 5)
-	public void verifyProductAddtoCart() throws EncryptedDocumentException, IOException
+	public void verifyProductAddtoCart() throws EncryptedDocumentException, IOException, InterruptedException
 	{
 		driver.navigate().refresh();
 		PC.enterthirdProduct(UC.ExcelSheet(4, 0));

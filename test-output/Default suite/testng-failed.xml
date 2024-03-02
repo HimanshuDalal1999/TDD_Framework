@@ -5,9 +5,16 @@
     <classes>
       <class name="Validation.TestClass">
         <methods>
+          <include name="verifyOrderFunctionality"/>
+          <include name="verifyProduct2"/>
+          <include name="verifyLogoText"/>
+          <include name="verifyProduct"/>
           <include name="openBrowser"/>
+          <include name="verifyProductAddtoCart"/>
+          <include name="verifyCartButton"/>
           <include name="VerifyFirstButton"/>
           <include name="closeBrowser"/>
+          <include name="VerifyRSLogin"/>
         </methods>
       </class> <!-- Validation.TestClass -->
     </classes>

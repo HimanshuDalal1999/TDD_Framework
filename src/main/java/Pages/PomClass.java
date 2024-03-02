@@ -26,8 +26,8 @@ public class PomClass extends BaseClass
 	@FindBy(xpath = "//h4[text()='Tomato - 1 Kg']") private WebElement Tproduct;
 	@FindBy(xpath = "//h4[text()='Cucumber - 1 Kg']") private WebElement Cproduct;
 	@FindBy(xpath = "//img[@alt='Cart']") private WebElement Cartbutton;
-	@FindBy(xpath = "(//input[@type='number'])[4]") private WebElement Nquantity;
-	@FindBy(xpath = "(//button[@type='button'])[5]") private WebElement AddtocartNquantity;
+	@FindBy(xpath = "//input[@class='quantity']") private WebElement Nquantity;
+	@FindBy(xpath = "//button[text()='ADD TO CART']") private WebElement AddtocartNquantity;
 	@FindBy(xpath = "//p[@class='quantity']") private WebElement quantityText;
 	@FindBy(xpath = "(//div[@class='product'])[24]") private WebElement strawberry;
 	@FindBy(xpath = "(//input[@class='quantity'])[24]") private WebElement strawberryQuantity;
@@ -89,14 +89,16 @@ public class PomClass extends BaseClass
 		return Product2Text;
 	}
 	//*******************4thTestCase*************************************
+	
+	//*******************5thTestCase*************************************
 	public void enterthirdProduct(String Product3)
 	{
 		product.clear();
 		product.sendKeys(Product3);
 	}
-	//**********************5thTestCase*****************************
-	public void enterQuantity(String Quantity)
+	public void enterQuantity(String Quantity) throws InterruptedException
 	{
+		Thread.sleep(3000);
 		Nquantity.clear();
 		Nquantity.sendKeys(Quantity);
 		AddtocartNquantity.click();
